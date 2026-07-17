@@ -7,6 +7,7 @@ import {
   Leaf,
   Tractor,
   Pill,
+  ShieldCheck,
   Zap,
   Package,
   Award,
@@ -14,19 +15,28 @@ import {
   MessageCircle,
   MapPin,
   Phone,
+  Mail,
   Clock,
   Star,
   Users,
   Instagram,
-  Facebook,
 } from "lucide-react";
 import heroImage from "@/assets/hero-ruralshop.jpg";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
 
 const PHONE_DISPLAY = "(67) 3358-7000";
-const WHATSAPP_BASE = "https://wa.me/5567333587000";
-const ADDRESS = "Rua São Borja, 508";
-const HOURS_WEEK = "Seg a Sex: 08h às 18h";
-const HOURS_SAT = "Sáb: 08h às 12h";
+const WHATSAPP_DISPLAY = "(67) 98767-744";
+const WHATSAPP_BASE = "https://wa.me/556798767744";
+const ADDRESS = "R. São Borja, 508 - Vila Célia, Campo Grande - MS, 79022-360, Brasil";
+const HOURS_WEEK = "Seg a Sex: 07h30 às 17h30";
+const HOURS_SAT = "Sáb: 07h30 às 11h30";
+const EMAIL_ADMIN = "administrativo@ruralshopcg.com.br";
 
 const waLink = (msg: string) =>
   `${WHATSAPP_BASE}?text=${encodeURIComponent(msg)}`;
@@ -39,6 +49,7 @@ const categories = [
   { icon: Leaf, name: "Adubos", msg: "Olá! Gostaria de consultar adubos disponíveis na Ruralshop." },
   { icon: Tractor, name: "Equipamentos", msg: "Olá! Gostaria de consultar equipamentos agropecuários na Ruralshop." },
   { icon: Pill, name: "Medicamentos", msg: "Olá! Gostaria de consultar medicamentos veterinários na Ruralshop." },
+  { icon: ShieldCheck, name: "Defensivos", msg: "Olá! Gostaria de consultar defensivos agrícolas disponíveis na Ruralshop." },
 ];
 
 const differentiators = [
@@ -69,14 +80,14 @@ export const Route = createFileRoute("/")({
             {
               "@type": "OpeningHoursSpecification",
               dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-              opens: "08:00",
-              closes: "18:00",
+              opens: "07:30",
+              closes: "17:30",
             },
             {
               "@type": "OpeningHoursSpecification",
               dayOfWeek: "Saturday",
-              opens: "08:00",
-              closes: "12:00",
+              opens: "07:30",
+              closes: "11:30",
             },
           ],
         }),
@@ -88,7 +99,7 @@ export const Route = createFileRoute("/")({
 function WhatsAppIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <path d="M20.52 3.48A11.87 11.87 0 0 0 12.06 0C5.5 0 .17 5.33.17 11.89a11.8 11.8 0 0 0 1.6 5.94L0 24l6.33-1.66a11.88 11.88 0 0 0 5.72 1.46h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.43-8.43ZM12.06 21.5h-.01a9.6 9.6 0 0 1-4.89-1.34l-.35-.21-3.76.99 1-3.66-.23-.37a9.6 9.6 0 0 1-1.47-5.03c0-5.31 4.32-9.63 9.63-9.63 2.57 0 4.99 1 6.8 2.82a9.57 9.57 0 0 1 2.83 6.82c-.01 5.31-4.33 9.61-9.55 9.61Zm5.28-7.2c-.29-.14-1.71-.84-1.98-.94-.27-.1-.46-.14-.66.15-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.14-1.22-.45-2.33-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.44.13-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.66-1.58-.9-2.17-.24-.57-.48-.49-.66-.5h-.56c-.19 0-.51.07-.77.36-.27.29-1.02 1-1.02 2.44 0 1.44 1.05 2.83 1.2 3.02.14.19 2.06 3.15 5 4.42.7.3 1.24.48 1.66.62.7.22 1.33.19 1.83.11.56-.08 1.71-.7 1.95-1.37.24-.68.24-1.25.17-1.37-.07-.12-.26-.19-.55-.34Z"/>
+      <path d="M20.52 3.48A11.87 11.87 0 0 0 12.06 0C5.5 0 .17 5.33.17 11.89a11.8 11.8 0 0 0 1.6 5.94L0 24l6.33-1.66a11.88 11.88 0 0 0 5.72 1.46h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.43-8.43ZM12.06 21.5h-.01a9.6 9.6 0 0 1-4.89-1.34l-.35-.21-3.76.99 1-3.66-.23-.37a9.6 9.6 0 0 1-1.47-5.03c0-5.31 4.32-9.63 9.63-9.63 2.57 0 4.99 1 6.8 2.82a9.57 9.57 0 0 1 2.83 6.82c-.01 5.31-4.33 9.61-9.55 9.61Zm5.28-7.2c-.29-.14-1.71-.84-1.98-.94-.27-.1-.46-.14-.66.15-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.14-1.22-.45-2.33-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.44.13-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.66-1.58-.9-2.17-.24-.57-.48-.49-.66-.5h-.56c-.19 0-.51.07-.77.36-.27.29-1.02 1-1.02 2.44 0 1.44 1.05 2.83 1.2 3.02.14.19 2.06 3.15 5 4.42.7.3 1.24.48 1.66.62.7.22 1.33.19 1.83.11.56-.08 1.71-.7 1.95-1.37.24-.68.24-1.25.17-1.37-.07-.12-.26-.19-.55-.34Z" />
     </svg>
   );
 }
@@ -132,11 +143,7 @@ function LandingPage() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-brand-dark/85 via-brand/70 to-brand-dark/90" />
         <div className="mx-auto max-w-6xl px-4 py-24 sm:py-32 lg:py-40">
           <div className="max-w-3xl text-white">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white ring-1 ring-white/30 backdrop-blur">
-              <span className="h-2 w-2 rounded-full bg-gold" />
-              Agropecuária • Campo Grande / MS
-            </span>
-            <h1 className="mt-6 font-display text-4xl font-extrabold leading-tight sm:text-6xl lg:text-7xl">
+            <h1 className="font-display text-4xl font-extrabold leading-tight sm:text-6xl lg:text-7xl">
               Ruralshop
               <span className="mt-2 block text-gold">O Shopping do Campo</span>
             </h1>
@@ -176,27 +183,41 @@ function LandingPage() {
             Escolha uma categoria e fale com a gente pelo WhatsApp — consultamos preço, estoque e disponibilidade na hora.
           </p>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {categories.map(({ icon: Icon, name, msg }) => (
-            <div
-              key={name}
-              className="group flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-1 hover:border-brand/50 hover:shadow-lg"
-            >
-              <div className="grid h-14 w-14 place-items-center rounded-xl bg-secondary text-brand transition group-hover:bg-brand group-hover:text-primary-foreground">
-                <Icon className="h-7 w-7" strokeWidth={2} />
-              </div>
-              <h3 className="mt-5 font-display text-xl font-bold text-brand-dark">{name}</h3>
-              <a
-                href={waLink(msg)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-brand/10 px-4 py-2.5 text-sm font-semibold text-brand-dark transition hover:bg-brand hover:text-primary-foreground"
-              >
-                <WhatsAppIcon className="h-4 w-4" />
-                Consultar via WhatsApp
-              </a>
-            </div>
-          ))}
+        <div className="relative mt-12 px-4 md:px-16">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {categories.map(({ icon: Icon, name, msg }) => (
+                <CarouselItem
+                  key={name}
+                  className="pl-4 basis-[85%] sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
+                >
+                  <div className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-1 hover:border-brand/50 hover:shadow-lg">
+                    <div className="grid h-14 w-14 place-items-center rounded-xl bg-secondary text-brand transition group-hover:bg-brand group-hover:text-primary-foreground">
+                      <Icon className="h-7 w-7" strokeWidth={2} />
+                    </div>
+                    <h3 className="mt-5 font-display text-xl font-bold text-brand-dark">{name}</h3>
+                    <a
+                      href={waLink(msg)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-brand/10 px-4 py-2.5 text-sm font-semibold text-brand-dark transition hover:bg-brand hover:text-primary-foreground"
+                    >
+                      <WhatsAppIcon className="h-4 w-4" />
+                      Consultar via WhatsApp
+                    </a>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:inline-flex" />
+            <CarouselNext className="hidden md:inline-flex" />
+          </Carousel>
         </div>
       </section>
 
@@ -283,6 +304,7 @@ function LandingPage() {
             <ul className="mt-8 space-y-5">
               <InfoRow icon={MapPin} title="Endereço" value={ADDRESS} />
               <InfoRow icon={Phone} title="Telefone" value={PHONE_DISPLAY} href="tel:+556733587000" />
+              <InfoRow icon={Mail} title="E-mail (Administrativo)" value={EMAIL_ADMIN} href={`mailto:${EMAIL_ADMIN}`} />
               <InfoRow
                 icon={Clock}
                 title="Horário de funcionamento"
@@ -307,7 +329,7 @@ function LandingPage() {
           </div>
           <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
             <iframe
-              title="Mapa da Ruralshop — Rua São Borja, 508"
+              title="Mapa da Ruralshop — R. São Borja, 508"
               src="https://www.google.com/maps?q=Rua+S%C3%A3o+Borja+508&output=embed"
               className="h-[380px] w-full"
               loading="lazy"
@@ -357,20 +379,34 @@ function LandingPage() {
           </div>
           <div>
             <h3 className="font-display text-sm font-bold uppercase tracking-wider text-white">Contato</h3>
-            <p className="mt-4 text-sm text-white/70">{PHONE_DISPLAY}</p>
+            <p className="mt-4 text-sm text-white/70">Telefone: {PHONE_DISPLAY}</p>
+            <p className="mt-1 text-sm text-white/70">WhatsApp: {WHATSAPP_DISPLAY}</p>
+            <p className="mt-1 text-sm text-white/70">
+              E-mail:{" "}
+              <a href={`mailto:${EMAIL_ADMIN}`} className="underline hover:text-white transition">{EMAIL_ADMIN}</a>
+            </p>
             <p className="mt-1 text-sm text-white/70">{HOURS_WEEK}</p>
             <p className="text-sm text-white/70">{HOURS_SAT}</p>
           </div>
           <div>
             <h3 className="font-display text-sm font-bold uppercase tracking-wider text-white">Redes sociais</h3>
             <div className="mt-4 flex gap-3">
-              <a href="#" aria-label="Instagram da Ruralshop" className="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition hover:bg-brand">
+              <a
+                href="https://www.instagram.com/ruralshopcgofc/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram da Ruralshop"
+                className="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition hover:bg-brand"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" aria-label="Facebook da Ruralshop" className="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition hover:bg-brand">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href={waLink("Olá!")} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp da Ruralshop" className="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition hover:bg-whatsapp">
+              <a
+                href={waLink("Olá!")}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp da Ruralshop"
+                className="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition hover:bg-whatsapp"
+              >
                 <WhatsAppIcon className="h-5 w-5" />
               </a>
             </div>
