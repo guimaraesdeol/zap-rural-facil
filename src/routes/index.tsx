@@ -109,6 +109,30 @@ function LandingPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
 
+      {/* Sticky header */}
+      <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/85 backdrop-blur">
+        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4">
+          <a href="#top" className="flex items-center gap-2">
+            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand text-primary-foreground">
+              <Sprout className="h-5 w-5" />
+            </span>
+            <span className="font-display text-lg font-extrabold tracking-tight text-brand-dark">
+              Ruralshop
+            </span>
+          </a>
+          <a
+            href={waLink("Olá! Gostaria de falar com a Ruralshop.")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-whatsapp-dark"
+          >
+            <WhatsAppIcon className="h-4 w-4" />
+            <span className="hidden sm:inline">Falar no WhatsApp</span>
+            <span className="sm:hidden">WhatsApp</span>
+          </a>
+        </div>
+      </header>
+
       {/* Hero */}
       <section id="top" className="relative isolate overflow-hidden">
         <img
