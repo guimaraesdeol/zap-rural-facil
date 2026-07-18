@@ -351,7 +351,7 @@ function LandingPage() {
             Fale agora mesmo com a nossa equipe pelo WhatsApp — consultamos estoque, preço e condições para o seu pedido em minutos.
           </p>
           <a
-            href={waLink("Olá! Quero fazer meu pedido agora na Ruralshop.")}
+            href={waLink("Olá! Quero falar com um vendedor.")}
             target="_blank"
             rel="noopener noreferrer"
             className="pulse-cta mt-10 inline-flex items-center gap-3 rounded-full bg-whatsapp px-8 py-5 text-lg font-bold text-white shadow-xl transition hover:bg-whatsapp-dark"
