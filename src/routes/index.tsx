@@ -70,13 +70,27 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           name: "Ruralshop",
-          description: "Loja agropecuária: sementes, ração, fertilizantes, EPIs, adubos, equipamentos e medicamentos.",
+          alternateName: "Ruralshop Campo Grande",
+          url: "https://www.ruralshopcg.com.br",
+          description: "Loja agropecuária em Campo Grande MS: sementes, rações, fertilizantes, defensivos agrícolas, EPIs, adubos, ferramentas rurais, irrigação e medicamentos veterinários.",
+          image: "https://www.ruralshopcg.com.br/og-image.jpg",
           address: {
             "@type": "PostalAddress",
             streetAddress: "Rua São Borja, 508",
+            addressLocality: "Campo Grande",
+            addressRegion: "MS",
+            postalCode: "79022-360",
             addressCountry: "BR",
           },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: -20.4697,
+            longitude: -54.6201,
+          },
           telephone: "+556733587000",
+          priceRange: "$$",
+          currenciesAccepted: "BRL",
+          paymentAccepted: "Cash, Credit Card, Debit Card, PIX",
           openingHoursSpecification: [
             {
               "@type": "OpeningHoursSpecification",
@@ -90,6 +104,9 @@ export const Route = createFileRoute("/")({
               opens: "07:30",
               closes: "11:30",
             },
+          ],
+          sameAs: [
+            "https://www.instagram.com/ruralshopcgofc/",
           ],
         }),
       },

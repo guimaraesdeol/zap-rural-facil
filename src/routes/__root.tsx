@@ -72,8 +72,9 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
-const TITLE = "Ruralshop – O Shopping do Campo | Sementes, Ração, Fertilizantes e Equipamentos Agropecuários";
-const DESCRIPTION = "Ruralshop: sementes, ração, fertilizantes, EPIs, adubos, equipamentos e medicamentos. Rua São Borja, 508. Fale agora: (67) 3358-7000.";
+const SITE_URL = "https://www.ruralshopcg.com.br";
+const TITLE = "Ruralshop – Loja Agropecuária em Campo Grande MS | Sementes, Rações, Defensivos e Medicamentos Veterinários";
+const DESCRIPTION = "Ruralshop: loja agropecuária em Campo Grande MS. Sementes, rações, fertilizantes, defensivos agrícolas, EPIs, adubos, ferramentas rurais e medicamentos veterinários. Rua São Borja, 508. Tel: (67) 3358-7000.";
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
@@ -82,17 +83,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: TITLE },
       { name: "description", content: DESCRIPTION },
-      { name: "author", content: "Ruralshop" },
+      { name: "author", content: "Ruralshop Campo Grande LTDA" },
+      { name: "robots", content: "index, follow" },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Ruralshop" },
+      { property: "og:url", content: SITE_URL },
+      { property: "og:locale", content: "pt_BR" },
+      { property: "og:image", content: `${SITE_URL}/og-image.jpg` },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Ruralshop – Loja Agropecuária em Campo Grande MS" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
+      { name: "twitter:image", content: `${SITE_URL}/og-image.jpg` },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "canonical", href: SITE_URL },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
