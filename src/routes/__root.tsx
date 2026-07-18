@@ -73,8 +73,8 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 const SITE_URL = "https://www.ruralshopcg.com.br";
-const TITLE = "Ruralshop – Loja Agropecuária em Campo Grande MS | Sementes, Rações, Defensivos e Medicamentos Veterinários";
-const DESCRIPTION = "Ruralshop: loja agropecuária em Campo Grande MS. Sementes, rações, fertilizantes, defensivos agrícolas, EPIs, adubos, ferramentas rurais e medicamentos veterinários. Rua São Borja, 508. Tel: (67) 3358-7000.";
+const TITLE = "Ruralshop – Agropecuária em Campo Grande MS";
+const DESCRIPTION = "Loja agropecuária em Campo Grande MS. Sementes, rações, defensivos agrícolas, medicamentos veterinários e ferramentas rurais. Tel: (67) 3358-7000.";
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
