@@ -154,7 +154,7 @@ function LandingPage() {
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-brand-dark/85 via-brand/70 to-brand-dark/90" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-brand-dark/45 via-brand/30 to-brand-dark/60" />
         <div className="mx-auto max-w-6xl px-4 py-24 sm:py-32 lg:py-40">
           <div className="max-w-3xl text-white">
             <h1 className="font-display text-4xl font-extrabold leading-tight sm:text-6xl lg:text-7xl">
