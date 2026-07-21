@@ -198,7 +198,7 @@ function LandingPage() {
             Tudo para o campo em um só lugar
           </h2>
           <p className="mt-4 text-base text-muted-foreground">
-            Escolha uma categoria e fale com a gente pelo WhatsApp — consultamos preço, estoque e disponibilidade na hora.
+            Escolha uma categoria e fale com a gente pelo WhatsApp — consulte preço, estoque e disponibilidade na hora.
           </p>
         </div>
         <div className="relative mt-12 px-4 md:px-16">
@@ -337,15 +337,6 @@ function LandingPage() {
                 }
               />
             </ul>
-            <a
-              href={waLink("Olá! Gostaria de tirar uma dúvida com a Ruralshop.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-whatsapp px-6 py-3 text-sm font-bold text-white transition hover:bg-whatsapp-dark"
-            >
-              <WhatsAppIcon className="h-4 w-4" />
-              Enviar mensagem no WhatsApp
-            </a>
           </div>
           <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
             <iframe
@@ -366,7 +357,7 @@ function LandingPage() {
             Pronto para fazer seu pedido?
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base text-white/90 sm:text-lg">
-            Fale agora mesmo com a nossa equipe pelo WhatsApp — consultamos estoque, preço e condições para o seu pedido em minutos.
+            Fale agora mesmo com a nossa equipe pelo WhatsApp — consulte estoque, preço e condições para o seu pedido em minutos.
           </p>
           <a
             href={waLink("Olá! Quero falar com um vendedor.")}
