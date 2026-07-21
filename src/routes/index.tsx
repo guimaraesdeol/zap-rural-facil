@@ -46,7 +46,7 @@ const waLink = (msg: string) =>
 
 const categories = [
   { icon: Sprout, name: "Sementes", msg: "Olá! Gostaria de consultar sementes disponíveis na Ruralshop." },
-  { icon: Wheat, name: "Rações - Grandes e Pequenos Animais", msg: "Olá! Gostaria de consultar rações para grandes e pequenos animais na Ruralshop." },
+  { icon: Wheat, name: "Rações", msg: "Olá! Gostaria de consultar rações disponíveis na Ruralshop." },
   { icon: FlaskConical, name: "Fertilizantes", msg: "Olá! Gostaria de consultar fertilizantes na Ruralshop." },
   { icon: HardHat, name: "EPIs", msg: "Olá! Gostaria de consultar EPIs disponíveis na Ruralshop." },
   { icon: Tractor, name: "Equipamentos", msg: "Olá! Gostaria de consultar equipamentos agropecuários na Ruralshop." },
@@ -257,10 +257,10 @@ function LandingPage() {
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <StatCard icon={Users} value="+10 mil" label="Clientes atendidos" />
-            <StatCard icon={Star} value="4,9★" label="Avaliação dos clientes" />
-            <StatCard icon={Award} value="+15 anos" label="Servindo o campo" />
-            <StatCard icon={Package} value="+2 mil" label="Produtos disponíveis" />
+            <StatCard icon={Award} value="+40 anos" label="No mercado" />
+            <StatCard icon={Users} value="+10 mil" label="Clientes cadastrados" />
+            <StatCard icon={Package} value="+5 mil" label="Itens à disposição" />
+            <StatCard icon={ShieldCheck} value="Líder" label="Em herbicidas para pastagens" />
           </div>
         </div>
       </section>
@@ -294,11 +294,11 @@ function LandingPage() {
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-14 text-center sm:flex-row sm:justify-between sm:text-left">
           <div className="flex items-center gap-4">
             <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gold text-brand-dark">
-              <Star className="h-7 w-7 fill-current" />
+              <Award className="h-7 w-7" />
             </div>
             <div>
-              <p className="font-display text-2xl font-extrabold">+15 anos servindo o campo</p>
-              <p className="text-sm text-white/80">Mais de 10 mil produtores rurais atendidos • Avaliação 4,9★ no Google</p>
+              <p className="font-display text-2xl font-extrabold">+40 anos no mercado</p>
+              <p className="text-sm text-white/80">Mais de 10 mil clientes cadastrados • Líder em herbicidas para pastagens</p>
             </div>
           </div>
           <a
