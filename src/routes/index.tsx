@@ -51,7 +51,7 @@ const categories = [
   { icon: HardHat, name: "EPIs", msg: "Olá! Gostaria de consultar EPIs disponíveis na Ruralshop." },
   { icon: Tractor, name: "Equipamentos", msg: "Olá! Gostaria de consultar equipamentos agropecuários na Ruralshop." },
   { icon: Syringe, name: "Produtos Veterinários", msg: "Olá! Gostaria de consultar produtos veterinários na Ruralshop." },
-  { icon: ShieldCheck, name: "Defensivos", msg: "Olá! Gostaria de consultar defensivos agrícolas disponíveis na Ruralshop." },
+  { icon: ShieldCheck, name: "Defensivos Agrícolas", msg: "Olá! Gostaria de consultar defensivos agrícolas disponíveis na Ruralshop." },
   { icon: Layers, name: "Selaria", msg: "Olá! Gostaria de consultar artigos de selaria na Ruralshop." },
   { icon: Droplets, name: "Irrigação", msg: "Olá! Gostaria de consultar produtos para irrigação na Ruralshop." },
   { icon: Flower2, name: "Jardinagem", msg: "Olá! Gostaria de consultar produtos para jardinagem na Ruralshop." },
@@ -166,7 +166,7 @@ function LandingPage() {
               <span className="mt-2 block text-gold">O Shopping do Produtor</span>
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/95 sm:text-lg">
-              Encontre tudo para o seu campo: <strong>sementes, rações (grandes e pequenos animais), fertilizantes, EPIs, equipamentos, produtos veterinários, defensivos, selaria e irrigação</strong>. Tudo o que o produtor rural precisa com atendimento rápido e orçamento na hora pelo WhatsApp!
+              Encontre tudo para o seu campo: <strong>sementes, rações (grandes e pequenos animais), fertilizantes, EPIs, equipamentos, produtos veterinários, defensivos agrícolas, selaria, irrigação e jardinagem</strong>. Tudo o que o produtor rural precisa com atendimento rápido e orçamento na hora pelo WhatsApp!
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
@@ -209,22 +209,24 @@ function LandingPage() {
             }}
             className="w-full"
           >
-            <CarouselContent className="-ml-4">
+            <CarouselContent className="-ml-4 flex items-stretch">
               {categories.map(({ icon: Icon, name, msg }) => (
                 <CarouselItem
                   key={name}
-                  className="pl-4 basis-[85%] sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
+                  className="pl-4 basis-[85%] sm:basis-1/2 md:basis-1/3 lg:basis-1/4 flex flex-col"
                 >
-                  <div className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-1 hover:border-brand/50 hover:shadow-lg">
-                    <div className="grid h-14 w-14 place-items-center rounded-xl bg-secondary text-brand transition group-hover:bg-brand group-hover:text-primary-foreground">
-                      <Icon className="h-7 w-7" strokeWidth={2} />
+                  <div className="group flex h-full w-full flex-col justify-between rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-1 hover:border-brand/50 hover:shadow-lg">
+                    <div>
+                      <div className="grid h-14 w-14 place-items-center rounded-xl bg-secondary text-brand transition group-hover:bg-brand group-hover:text-primary-foreground">
+                        <Icon className="h-7 w-7" strokeWidth={2} />
+                      </div>
+                      <h3 className="mt-5 font-display text-xl font-bold text-brand-dark">{name}</h3>
                     </div>
-                    <h3 className="mt-5 font-display text-xl font-bold text-brand-dark">{name}</h3>
                     <a
                       href={waLink(msg)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-brand/10 px-4 py-2.5 text-sm font-semibold text-brand-dark transition hover:bg-brand hover:text-primary-foreground"
+                      className="mt-auto pt-6 inline-flex items-center justify-center gap-2 rounded-full bg-brand/10 px-4 py-2.5 text-sm font-semibold text-brand-dark transition hover:bg-brand hover:text-primary-foreground"
                     >
                       <WhatsAppIcon className="h-4 w-4" />
                       Consultar via WhatsApp
