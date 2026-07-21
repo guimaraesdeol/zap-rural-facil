@@ -331,7 +331,10 @@ function LandingPage() {
             <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gold text-brand-dark">
               <Award className="h-7 w-7" />
             </div>
-            <p className="font-display text-2xl font-extrabold">+40 anos servindo o homem do campo</p>
+            <div>
+              <p className="font-display text-2xl font-extrabold">+40 anos servindo o homem do campo</p>
+              <p className="text-sm text-white/80">Referência em produtos agropecuários em Campo Grande MS • Do plantio à colheita, estamos com você</p>
+            </div>
           </div>
           <a
             href={waLink("Olá! Quero saber mais sobre a Ruralshop.")}
