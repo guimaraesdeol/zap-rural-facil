@@ -76,7 +76,7 @@ export const Route = createFileRoute("/")({
           name: "Ruralshop",
           alternateName: "Ruralshop Campo Grande",
           url: "https://www.ruralshopcg.com.br",
-          description: "Loja agropecuária em Campo Grande MS: sementes, rações para grandes e pequenos animais, fertilizantes, defensivos agrícolas, EPIs, equipamentos rurais, produtos veterinários, selaria e irrigação.",
+          description: "Loja de produtos agropecuários em Campo Grande MS: sementes, rações, fertilizantes, defensivos agrícolas, EPIs, equipamentos rurais, produtos veterinários, selaria, irrigação e jardinagem.",
           image: "https://www.ruralshopcg.com.br/og-image.jpg",
           address: {
             "@type": "PostalAddress",

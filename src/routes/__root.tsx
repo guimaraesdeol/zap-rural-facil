@@ -73,8 +73,8 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 const SITE_URL = "https://www.ruralshopcg.com.br";
-const TITLE = "Ruralshop – Agropecuária em Campo Grande MS";
-const DESCRIPTION = "Loja agropecuária em Campo Grande MS. Sementes, rações, defensivos agrícolas, medicamentos veterinários e ferramentas rurais. Tel: (67) 3358-7000.";
+const TITLE = "Ruralshop – Loja de Produtos Agropecuários em Campo Grande MS";
+const DESCRIPTION = "Loja de produtos agropecuários em Campo Grande MS. Sementes, rações, fertilizantes, EPIs, produtos veterinários, defensivos agrícolas, selaria, irrigação e jardinagem. Tel: (67) 3358-7000.";
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
@@ -94,7 +94,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:image", content: `${SITE_URL}/og-image.jpg` },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Ruralshop – Loja Agropecuária em Campo Grande MS" },
+      { property: "og:image:alt", content: "Ruralshop – Loja de Produtos Agropecuários em Campo Grande MS" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
