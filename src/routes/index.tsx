@@ -39,7 +39,7 @@ const WHATSAPP_BASE = "https://wa.me/556798767744";
 const ADDRESS = "R. São Borja, 508 - Vila Célia, Campo Grande - MS, 79022-360, Brasil";
 const HOURS_WEEK = "Seg a Sex: 07h30 às 17h30";
 const HOURS_SAT = "Sáb: 07h30 às 11h30";
-const EMAIL_ADMIN = "administrativo@ruralshopcg.com.br";
+const EMAIL_ADMIN = "contato@ruralshopcg.com.br";
 
 const waLink = (msg: string) =>
   `${WHATSAPP_BASE}?text=${encodeURIComponent(msg)}`;
@@ -324,7 +324,7 @@ function LandingPage() {
             <ul className="mt-8 space-y-5">
               <InfoRow icon={MapPin} title="Endereço" value={ADDRESS} />
               <InfoRow icon={Phone} title="Telefone" value={PHONE_DISPLAY} href="tel:+556733587000" />
-              <InfoRow icon={Mail} title="E-mail (Administrativo)" value={EMAIL_ADMIN} href={`mailto:${EMAIL_ADMIN}`} />
+              <InfoRow icon={Mail} title="E-mail corporativo" value={EMAIL_ADMIN} href={`mailto:${EMAIL_ADMIN}`} />
               <InfoRow
                 icon={Clock}
                 title="Horário de funcionamento"
