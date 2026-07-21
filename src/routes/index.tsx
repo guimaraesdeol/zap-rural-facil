@@ -4,9 +4,8 @@ import {
   Wheat,
   FlaskConical,
   HardHat,
-  Leaf,
   Tractor,
-  Pill,
+  Syringe,
   ShieldCheck,
   Zap,
   Package,
@@ -20,6 +19,9 @@ import {
   Star,
   Users,
   Instagram,
+  Droplets,
+  Layers,
+  Flower2,
 } from "lucide-react";
 import heroImage from "@/assets/hero-ruralshop.jpg";
 import logoImage from "@/assets/logo.png";
@@ -44,13 +46,15 @@ const waLink = (msg: string) =>
 
 const categories = [
   { icon: Sprout, name: "Sementes", msg: "Olá! Gostaria de consultar sementes disponíveis na Ruralshop." },
-  { icon: Wheat, name: "Ração", msg: "Olá! Gostaria de consultar rações disponíveis na Ruralshop." },
+  { icon: Wheat, name: "Rações - Grandes e Pequenos Animais", msg: "Olá! Gostaria de consultar rações para grandes e pequenos animais na Ruralshop." },
   { icon: FlaskConical, name: "Fertilizantes", msg: "Olá! Gostaria de consultar fertilizantes na Ruralshop." },
   { icon: HardHat, name: "EPIs", msg: "Olá! Gostaria de consultar EPIs disponíveis na Ruralshop." },
-  { icon: Leaf, name: "Adubos", msg: "Olá! Gostaria de consultar adubos disponíveis na Ruralshop." },
   { icon: Tractor, name: "Equipamentos", msg: "Olá! Gostaria de consultar equipamentos agropecuários na Ruralshop." },
-  { icon: Pill, name: "Medicamentos", msg: "Olá! Gostaria de consultar medicamentos veterinários na Ruralshop." },
+  { icon: Syringe, name: "Produtos Veterinários", msg: "Olá! Gostaria de consultar produtos veterinários na Ruralshop." },
   { icon: ShieldCheck, name: "Defensivos", msg: "Olá! Gostaria de consultar defensivos agrícolas disponíveis na Ruralshop." },
+  { icon: Layers, name: "Selaria", msg: "Olá! Gostaria de consultar artigos de selaria na Ruralshop." },
+  { icon: Droplets, name: "Irrigação", msg: "Olá! Gostaria de consultar produtos para irrigação na Ruralshop." },
+  { icon: Flower2, name: "Jardinagem", msg: "Olá! Gostaria de consultar produtos para jardinagem na Ruralshop." },
 ];
 
 const differentiators = [
@@ -72,7 +76,7 @@ export const Route = createFileRoute("/")({
           name: "Ruralshop",
           alternateName: "Ruralshop Campo Grande",
           url: "https://www.ruralshopcg.com.br",
-          description: "Loja agropecuária em Campo Grande MS: sementes, rações, fertilizantes, defensivos agrícolas, EPIs, adubos, ferramentas rurais, irrigação e medicamentos veterinários.",
+          description: "Loja agropecuária em Campo Grande MS: sementes, rações para grandes e pequenos animais, fertilizantes, defensivos agrícolas, EPIs, equipamentos rurais, produtos veterinários, selaria e irrigação.",
           image: "https://www.ruralshopcg.com.br/og-image.jpg",
           address: {
             "@type": "PostalAddress",
@@ -159,10 +163,10 @@ function LandingPage() {
           <div className="max-w-3xl text-white">
             <h1 className="font-display text-4xl font-extrabold leading-tight sm:text-6xl lg:text-7xl">
               Ruralshop
-              <span className="mt-2 block text-gold">O Shopping do Campo</span>
+              <span className="mt-2 block text-gold">O Shopping do Produtor</span>
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/95 sm:text-lg">
-              Encontre tudo para o seu campo: <strong>sementes, ração, fertilizantes, EPIs, adubos, equipamentos e medicamentos veterinários</strong>. Tudo o que o produtor rural precisa com atendimento rápido e orçamento na hora pelo WhatsApp!
+              Encontre tudo para o seu campo: <strong>sementes, rações (grandes e pequenos animais), fertilizantes, EPIs, equipamentos, produtos veterinários, defensivos, selaria e irrigação</strong>. Tudo o que o produtor rural precisa com atendimento rápido e orçamento na hora pelo WhatsApp!
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
@@ -382,7 +386,7 @@ function LandingPage() {
             <div className="flex items-center gap-3">
               <img src={logoImage} alt="Ruralshop Logo" className="h-12 w-auto object-contain" />
             </div>
-            <p className="mt-4 text-sm text-white/60">O Shopping do Campo — tudo para o produtor rural em um só lugar.</p>
+            <p className="mt-4 text-sm text-white/60">O Shopping do Produtor — tudo para o produtor rural em um só lugar.</p>
           </div>
           <div>
             <h3 className="font-display text-sm font-bold uppercase tracking-wider text-white">Endereço</h3>
@@ -421,7 +425,7 @@ function LandingPage() {
         </div>
         <div className="border-t border-white/10">
           <div className="mx-auto max-w-6xl px-4 py-6 text-center text-xs text-white/50">
-            © {new Date().getFullYear()} Ruralshop — O Shopping do Campo. Todos os direitos reservados.
+            © {new Date().getFullYear()} Ruralshop — O Shopping do Produtor. Todos os direitos reservados.
           </div>
         </div>
       </footer>
