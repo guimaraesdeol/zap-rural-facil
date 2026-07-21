@@ -129,13 +129,8 @@ function LandingPage() {
       {/* Sticky header */}
       <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/85 backdrop-blur">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4">
-          <a href="#top" className="flex items-center gap-2">
-            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand text-primary-foreground">
-              <Sprout className="h-5 w-5" />
-            </span>
-            <span className="font-display text-lg font-extrabold tracking-tight text-brand-dark">
-              Ruralshop
-            </span>
+          <a href="#top" className="flex items-center">
+            <img src={logoImage} alt="Ruralshop" className="h-10 sm:h-12 w-auto object-contain" />
           </a>
           <a
             href={waLink("Olá! Gostaria de falar com a Ruralshop.")}
