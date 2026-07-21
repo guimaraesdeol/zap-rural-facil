@@ -421,7 +421,7 @@ function LandingPage() {
 
       {/* Footer */}
       <footer className="bg-neutral-950 text-white/80">
-        <div className="mx-auto grid max-w-6xl gap-8 sm:gap-10 px-4 py-10 sm:py-14 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto grid max-w-6xl gap-8 sm:gap-10 px-4 py-10 sm:py-14 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           <div>
             <div className="flex items-center gap-3">
               <img src={logoImage} alt="Ruralshop Logo" className="h-10 sm:h-12 w-auto object-contain" />
@@ -438,6 +438,16 @@ function LandingPage() {
             <p className="mt-1 text-xs sm:text-sm text-white/70">WhatsApp: {WHATSAPP_DISPLAY}</p>
             <p className="mt-1 text-xs sm:text-sm text-white/70">{HOURS_WEEK}</p>
             <p className="text-xs sm:text-sm text-white/70">{HOURS_SAT}</p>
+          </div>
+          <div>
+            <h3 className="font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-white">Trabalhe conosco</h3>
+            <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-white/70">Quer fazer parte da equipe?</p>
+            <button
+              onClick={() => setShowTrabalhe(true)}
+              className="mt-2 text-xs sm:text-sm font-semibold text-white underline underline-offset-2 transition hover:text-gold"
+            >
+              Envie seu currículo
+            </button>
           </div>
           <div>
             <h3 className="font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-white">Redes sociais</h3>
@@ -461,12 +471,6 @@ function LandingPage() {
                 <WhatsAppIcon className="h-5 w-5" />
               </a>
             </div>
-            <button
-              onClick={() => setShowTrabalhe(true)}
-              className="mt-4 text-xs sm:text-sm font-semibold text-white/70 underline underline-offset-2 transition hover:text-white"
-            >
-              Trabalhe conosco
-            </button>
           </div>
         </div>
         <div className="border-t border-white/10">
