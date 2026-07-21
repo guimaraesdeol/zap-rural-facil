@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import {
   Sprout,
   Wheat,
@@ -127,8 +128,42 @@ function WhatsAppIcon({ className = "h-5 w-5" }: { className?: string }) {
 }
 
 function LandingPage() {
+  const [showTrabalhe, setShowTrabalhe] = useState(false);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
+
+      {/* Trabalhe Conosco Modal */}
+      {showTrabalhe && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowTrabalhe(false)}>
+          <div className="relative mx-4 w-full max-w-lg rounded-2xl bg-white p-8 shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={() => setShowTrabalhe(false)}
+              className="absolute right-4 top-4 grid h-8 w-8 place-items-center rounded-full text-foreground/60 transition hover:bg-secondary hover:text-foreground"
+              aria-label="Fechar"
+            >
+              ✕
+            </button>
+            <div className="text-center">
+              <div className="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-brand/10 text-brand">
+                <Mail className="h-7 w-7" />
+              </div>
+              <h3 className="mt-5 font-display text-2xl font-extrabold text-brand-dark">Trabalhe Conosco</h3>
+              <p className="mt-4 text-base leading-relaxed text-foreground/80">
+                Quer fazer parte da nossa equipe? Envie seu currículo para o e-mail abaixo:
+              </p>
+              <a
+                href="mailto:administrativo@ruralshopcg.com.br?subject=Curr%C3%ADculo%20-%20Trabalhe%20Conosco"
+                className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-bold text-white transition hover:bg-brand-dark"
+              >
+                <Mail className="h-4 w-4" />
+                administrativo@ruralshopcg.com.br
+              </a>
+              <p className="mt-4 text-xs text-muted-foreground">Envie seu currículo em anexo (PDF ou Word).</p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Sticky header */}
       <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/85 backdrop-blur">
@@ -296,10 +331,7 @@ function LandingPage() {
             <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gold text-brand-dark">
               <Award className="h-7 w-7" />
             </div>
-            <div>
-              <p className="font-display text-2xl font-extrabold">+40 anos no mercado</p>
-              <p className="text-sm text-white/80">Mais de 10 mil clientes cadastrados • Líder em herbicidas para pastagens</p>
-            </div>
+            <p className="font-display text-2xl font-extrabold">+40 anos servindo o homem do campo</p>
           </div>
           <a
             href={waLink("Olá! Quero saber mais sobre a Ruralshop.")}
@@ -414,6 +446,12 @@ function LandingPage() {
                 <WhatsAppIcon className="h-5 w-5" />
               </a>
             </div>
+            <button
+              onClick={() => setShowTrabalhe(true)}
+              className="mt-5 text-sm font-semibold text-white/70 underline underline-offset-2 transition hover:text-white"
+            >
+              Trabalhe conosco
+            </button>
           </div>
         </div>
         <div className="border-t border-white/10">
