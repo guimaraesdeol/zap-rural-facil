@@ -421,16 +421,12 @@ function LandingPage() {
 
       {/* Footer */}
       <footer className="bg-neutral-950 text-white/80">
-        <div className="mx-auto grid max-w-6xl gap-8 sm:gap-10 px-4 py-10 sm:py-14 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto grid max-w-6xl gap-8 sm:gap-10 px-4 py-10 sm:py-14 grid-cols-1 sm:grid-cols-3">
           <div>
             <div className="flex items-center gap-3">
               <img src={logoImage} alt="Ruralshop Logo" className="h-10 sm:h-12 w-auto object-contain" />
             </div>
             <p className="mt-4 text-xs sm:text-sm text-white/60">O Shopping do Produtor — tudo para o produtor rural em um só lugar.</p>
-          </div>
-          <div>
-            <h3 className="font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-white">Endereço</h3>
-            <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-white/70">{ADDRESS}</p>
           </div>
           <div>
             <h3 className="font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-white">Contato</h3>
