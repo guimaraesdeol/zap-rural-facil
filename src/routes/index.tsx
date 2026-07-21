@@ -226,10 +226,10 @@ function LandingPage() {
                       href={waLink(msg)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-auto pt-6 inline-flex items-center justify-center gap-2 rounded-full bg-brand/10 px-4 py-2.5 text-sm font-semibold text-brand-dark transition hover:bg-brand hover:text-primary-foreground"
+                      className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand/10 px-4 py-2.5 text-center text-sm font-semibold text-brand-dark transition hover:bg-brand hover:text-primary-foreground"
                     >
-                      <WhatsAppIcon className="h-4 w-4" />
-                      Consultar via WhatsApp
+                      <WhatsAppIcon className="h-4 w-4 shrink-0" />
+                      <span>Consultar via WhatsApp</span>
                     </a>
                   </div>
                 </CarouselItem>
