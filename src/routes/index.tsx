@@ -421,12 +421,16 @@ function LandingPage() {
 
       {/* Footer */}
       <footer className="bg-neutral-950 text-white/80">
-        <div className="mx-auto grid max-w-6xl gap-8 sm:gap-10 px-4 py-10 sm:py-14 grid-cols-1 sm:grid-cols-3">
+        <div className="mx-auto grid max-w-6xl gap-8 sm:gap-10 px-4 py-10 sm:py-14 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-3">
               <img src={logoImage} alt="Ruralshop Logo" className="h-10 sm:h-12 w-auto object-contain" />
             </div>
             <p className="mt-4 text-xs sm:text-sm text-white/60">O Shopping do Produtor — tudo para o produtor rural em um só lugar.</p>
+          </div>
+          <div>
+            <h3 className="font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-white">Endereço</h3>
+            <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-white/70">{ADDRESS}</p>
           </div>
           <div>
             <h3 className="font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-white">Contato</h3>
@@ -466,8 +470,13 @@ function LandingPage() {
           </div>
         </div>
         <div className="border-t border-white/10">
-          <div className="mx-auto max-w-6xl px-4 py-5 text-center text-xs text-white/50">
-            © {new Date().getFullYear()} Ruralshop — O Shopping do Produtor. Todos os direitos reservados.
+          <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-4 py-5 text-center text-xs text-white/50 sm:flex-row">
+            <div>
+              © {new Date().getFullYear()} Ruralshop — O Shopping do Produtor. Todos os direitos reservados.
+            </div>
+            <div className="text-[11px] text-white/40">
+              Desenvolvido por Eduardo Guimarães
+            </div>
           </div>
         </div>
       </footer>
