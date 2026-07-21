@@ -373,14 +373,26 @@ function LandingPage() {
               />
             </ul>
           </div>
-          <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
+          <div className="flex flex-col overflow-hidden rounded-2xl border border-border shadow-sm">
             <iframe
               title="Mapa da Ruralshop — R. São Borja, 508"
-              src="https://www.google.com/maps?q=Rua+S%C3%A3o+Borja+508&output=embed"
-              className="h-[380px] w-full"
+              src="https://maps.google.com/maps?q=Rua+S%C3%A3o+Borja+508,+Vila+C%C3%A9lia,+Campo+Grande+-+MS&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              className="h-[280px] sm:h-[380px] w-full border-0"
               loading="lazy"
+              allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
             />
+            <div className="bg-card p-4 text-center border-t border-border">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Rua+S%C3%A3o+Borja+508+Campo+Grande+MS"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-dark"
+              >
+                <MapPin className="h-4 w-4" />
+                <span>Como Chegar / Abrir no Google Maps</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
