@@ -128,9 +128,9 @@ function LandingPage() {
 
       {/* Sticky header */}
       <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/85 backdrop-blur">
-        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4">
+        <div className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-4 px-4">
           <a href="#top" className="flex items-center">
-            <img src={logoImage} alt="Ruralshop" className="h-10 sm:h-12 w-auto object-contain" />
+            <img src={logoImage} alt="Ruralshop" className="h-12 sm:h-[58px] w-auto object-contain" />
           </a>
           <a
             href={waLink("Olá! Gostaria de falar com a Ruralshop.")}
@@ -380,8 +380,7 @@ function LandingPage() {
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-3">
-              <img src={logoImage} alt="Ruralshop Logo" className="h-12 w-12 object-contain" />
-              <span className="font-display text-2xl font-extrabold text-white leading-none">Ruralshop</span>
+              <img src={logoImage} alt="Ruralshop Logo" className="h-14 w-auto object-contain" />
             </div>
             <p className="mt-4 text-sm text-white/60">O Shopping do Campo — tudo para o produtor rural em um só lugar.</p>
           </div>
