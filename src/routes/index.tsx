@@ -285,7 +285,7 @@ function LandingPage() {
               Tradição no atendimento ao produtor rural
             </h2>
             <p className="mt-5 text-base leading-relaxed text-foreground/80">
-              A Ruralshop é referência em produtos agropecuários, unindo variedade, qualidade e um atendimento próximo, feito por quem entende do campo.
+              A Ruralshop é referência em produtos agropecuários, oferecendo a maior variedade de estoque a pronta entrega com a qualidade e o atendimento próximo de quem realmente entende do campo.
             </p>
             <p className="mt-3 text-base leading-relaxed text-foreground/80">
               Do pequeno criador ao grande produtor, nossa missão é facilitar a rotina de quem trabalha na lavoura, na pecuária e no dia a dia rural — com produtos que fazem a diferença e um atendimento pelo WhatsApp que resolve.
