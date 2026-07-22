@@ -168,12 +168,7 @@ function LandingPage() {
               className="h-[53px] sm:h-[72px] w-auto object-contain"
             />
           </a>
-          <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-zinc-700" aria-label="Navegação Principal">
-            <a href="#categorias" className="transition hover:text-brand">Categorias</a>
-            <a href="#sobre" className="transition hover:text-brand">Sobre</a>
-            <a href="#diferenciais" className="transition hover:text-brand">Diferenciais</a>
-            <a href="#localizacao" className="transition hover:text-brand">Localização</a>
-          </nav>
+
           <a
             href={waLink("Olá! Gostaria de falar com o Ruralshop.")}
             target="_blank"
