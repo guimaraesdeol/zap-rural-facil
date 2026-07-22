@@ -193,14 +193,14 @@ function LandingPage() {
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-brand-dark/55 via-brand/38 to-brand-dark/65" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-brand-dark/42 via-brand/25 to-brand-dark/52" />
         <div className="mx-auto max-w-6xl px-4 py-14 sm:py-32 lg:py-40">
           <div className="max-w-3xl text-white">
-            <h1 className="font-display text-3xl font-extrabold leading-tight sm:text-6xl lg:text-7xl [text-shadow:_0_2px_4px_rgba(0,0,0,0.85)]">
+            <h1 className="font-display text-3xl font-extrabold leading-tight sm:text-6xl lg:text-7xl">
               Ruralshop
-              <span className="mt-1 sm:mt-2 block text-gold [text-shadow:_0_2px_4px_rgba(0,0,0,0.85)]">O Shopping do Produtor</span>
+              <span className="mt-1 sm:mt-2 block text-gold">O Shopping do Produtor</span>
             </h1>
-            <p className="mt-4 sm:mt-6 max-w-2xl text-sm sm:text-lg leading-relaxed text-white/95 [text-shadow:_0_2px_4px_rgba(0,0,0,0.85)]">
+            <p className="mt-4 sm:mt-6 max-w-2xl text-sm sm:text-base leading-loose sm:leading-loose text-white/95 [text-shadow:_0_2px_4px_rgba(0,0,0,0.85)]">
               Encontre tudo o que precisa em um só lugar. Oferecemos uma <strong>linha completa de produtos para o produtor rural, unindo variedade, qualidade e agilidade no atendimento</strong>. Fale conosco pelo WhatsApp e receba seu orçamento na hora!
             </p>
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
