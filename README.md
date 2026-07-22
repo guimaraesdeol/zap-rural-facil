@@ -5,7 +5,7 @@ Landing page e catálogo interativo para a empresa **Ruralshop** em Campo Grande
 
 ## Tecnologias e Dependências
 
-O projeto foi construído utilizando as seguintes tecnologias de ponta:
+O projeto foi construído utilizando as seguintes tecnologias:
 
 ### **Core & Framework**
 * **[React 19](https://react.dev/)**: Biblioteca principal de interface.
