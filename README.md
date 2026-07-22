@@ -1,10 +1,9 @@
-# 🌾 Ruralshop — O Shopping do Produtor
-
-Landing page de alta conversão e catálogo interativo para o **Ruralshop** em Campo Grande - MS. Desenvolvido para conectar o produtor rural diretamente à equipe de vendas através de atendimento rápido via WhatsApp.
+# Projeto Site Ruralshop
+Landing page e catálogo interativo para a empresa **Ruralshop** em Campo Grande - MS. Desenvolvido para conectar o produtor rural diretamente à equipe de vendas através de atendimento rápido via WhatsApp.
 
 ---
 
-## 🚀 Tecnologias e Dependências
+## Tecnologias e Dependências
 
 O projeto foi construído utilizando as seguintes tecnologias de ponta:
 
@@ -23,7 +22,7 @@ O projeto foi construído utilizando as seguintes tecnologias de ponta:
 
 ---
 
-## ⚡ Principais Funcionalidades
+## Principais Funcionalidades
 
 1. **Atendimento Direto no WhatsApp**:
    - Links dinâmicos com mensagens pré-formatadas para cada categoria de produto (Sementes, Rações, Fertilizantes, EPIs, Equipamentos, Produtos Veterinários, Defensivos, Selaria, Irrigação e Jardinagem).
@@ -40,7 +39,7 @@ O projeto foi construído utilizando as seguintes tecnologias de ponta:
 
 ---
 
-## 🛠️ Como Executar o Projeto
+## Como Executar o Projeto
 
 ### Pré-requisitos
 * **Node.js** (v20.19+ ou v22.12+) ou **Bun** (Recomendado).
@@ -75,7 +74,7 @@ bun run build   # ou npm run build
 
 ---
 
-## 📄 Licença
+## Licença
 
 Este projeto é de uso exclusivo para o **Ruralshop Campo Grande LTDA**.
 Desenvolvido por **Eduardo Guimarães**.
