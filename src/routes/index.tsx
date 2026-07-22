@@ -168,6 +168,12 @@ function LandingPage() {
               className="h-[53px] sm:h-[72px] w-auto object-contain"
             />
           </a>
+          <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-zinc-700" aria-label="Navegação Principal">
+            <a href="#categorias" className="transition hover:text-brand">Categorias</a>
+            <a href="#sobre" className="transition hover:text-brand">Sobre</a>
+            <a href="#diferenciais" className="transition hover:text-brand">Diferenciais</a>
+            <a href="#localizacao" className="transition hover:text-brand">Localização</a>
+          </nav>
           <a
             href={waLink("Olá! Gostaria de falar com o Ruralshop.")}
             target="_blank"
@@ -203,6 +209,7 @@ function LandingPage() {
             <h1 className="font-display text-3xl font-extrabold leading-tight sm:text-6xl lg:text-7xl">
               Ruralshop
               <span className="mt-1 sm:mt-2 block text-gold-light">O Shopping do Produtor</span>
+              <span className="sr-only"> — Loja de Produtos Agropecuários em Campo Grande MS</span>
             </h1>
             <p className="mt-4 sm:mt-6 max-w-2xl text-sm sm:text-base leading-loose sm:leading-loose text-white/95 [text-shadow:_0_2px_4px_rgba(0,0,0,0.85)]">
               Encontre tudo o que precisa em um só lugar. Oferecemos uma <strong>linha completa de produtos para o produtor rural, unindo variedade, qualidade e agilidade no atendimento</strong>. Fale conosco pelo WhatsApp e receba seu orçamento na hora!
@@ -256,7 +263,7 @@ function LandingPage() {
       </section>
 
       {/* About */}
-      <section className="bg-secondary/60 py-12 sm:py-20">
+      <section id="sobre" className="bg-secondary/60 py-12 sm:py-20">
         <div className="mx-auto grid max-w-6xl gap-8 sm:gap-10 px-4 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-earth">Sobre a loja</p>
@@ -280,7 +287,7 @@ function LandingPage() {
       </section>
 
       {/* Differentiators */}
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20">
+      <section id="diferenciais" className="mx-auto max-w-6xl px-4 py-12 sm:py-20">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-earth">Por que o Ruralshop</p>
           <h2 className="mt-2 sm:mt-3 font-display text-2xl sm:text-4xl font-extrabold text-brand-dark">
