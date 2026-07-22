@@ -24,8 +24,11 @@ import {
   Layers,
   Flower2,
 } from "lucide-react";
+import heroImage768 from "@/assets/hero-ruralshop-768.avif";
+import heroImage1200 from "@/assets/hero-ruralshop-1200.avif";
+import heroImage1454 from "@/assets/hero-ruralshop-1454.avif";
 import heroImage from "@/assets/hero-ruralshop.avif";
-import logoImage from "@/assets/logo.png";
+import logoImage from "@/assets/logo.webp";
 import {
   Carousel,
   CarouselContent,
@@ -190,13 +193,18 @@ function LandingPage() {
 
       {/* Hero */}
       <section id="top" className="relative isolate overflow-hidden">
-        <img
-          src={heroImage}
-          alt="Paisagem rural com plantações verdes ao amanhecer, representando o campo brasileiro"
-          className="absolute inset-0 -z-10 h-full w-full object-cover"
-          width={1920}
-          height={1080}
-        />
+        <picture>
+          <source media="(max-width: 768px)" srcSet={heroImage768} type="image/avif" />
+          <source media="(max-width: 1200px)" srcSet={heroImage1200} type="image/avif" />
+          <source media="(max-width: 1454px)" srcSet={heroImage1454} type="image/avif" />
+          <img
+            src={heroImage1454}
+            alt="Paisagem rural com plantações verdes ao amanhecer, representando o campo brasileiro"
+            className="absolute inset-0 -z-10 h-full w-full object-cover"
+            width={1454}
+            height={818}
+          />
+        </picture>
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-brand-dark/42 via-brand/25 to-brand-dark/52" />
         <div className="mx-auto max-w-6xl px-4 py-14 sm:py-32 lg:py-40">
           <div className="max-w-3xl text-white">
