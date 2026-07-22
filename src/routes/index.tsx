@@ -212,7 +212,7 @@ function LandingPage() {
               <span className="sr-only"> — Loja de Produtos Agropecuários em Campo Grande MS</span>
             </h1>
             <p className="mt-4 sm:mt-6 max-w-2xl text-sm sm:text-base leading-loose sm:leading-loose text-white/95 [text-shadow:_0_2px_4px_rgba(0,0,0,0.85)]">
-              Encontre tudo o que precisa em um só lugar. Oferecemos uma <strong>linha completa de produtos para o produtor rural, unindo variedade, qualidade e agilidade no atendimento</strong>. Fale conosco pelo WhatsApp e receba seu orçamento na hora!
+              O <strong>Ruralshop é o Shopping do Produtor</strong> — encontre tudo o que precisa em um só lugar. Oferecemos uma <strong>linha completa de produtos para o produtor rural, unindo variedade, qualidade e agilidade no atendimento</strong>. Fale conosco pelo WhatsApp e receba seu orçamento na hora!
             </p>
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <a
