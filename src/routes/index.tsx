@@ -28,7 +28,12 @@ import heroImage768 from "@/assets/hero-ruralshop-768.avif";
 import heroImage1200 from "@/assets/hero-ruralshop-1200.avif";
 import heroImage1454 from "@/assets/hero-ruralshop-1454.avif";
 import heroImage from "@/assets/hero-ruralshop.avif";
+import logoImage106 from "@/assets/logo-106.webp";
+import logoImage144 from "@/assets/logo-144.webp";
 import logoImage from "@/assets/logo.webp";
+
+const logoSrcSet = `${logoImage106} 106w, ${logoImage144} 144w`;
+
 import {
   Carousel,
   CarouselContent,
@@ -184,7 +189,15 @@ function LandingPage() {
       <header className="sticky top-0 z-40 w-full border-b border-black/10 bg-white/88 backdrop-blur-md text-zinc-900">
         <div className="mx-auto flex py-0.5 sm:py-1 max-w-6xl items-center justify-between gap-3 px-3 sm:px-4">
           <a href="#top" className="flex items-center shrink-0">
-            <img src={logoImage} alt="Ruralshop" className="h-[53px] sm:h-[72px] w-auto object-contain" />
+            <img
+              src={logoImage}
+              srcSet={logoSrcSet}
+              sizes="(max-width: 640px) 106px, 144px"
+              width={144}
+              height={98}
+              alt="Ruralshop"
+              className="h-[53px] sm:h-[72px] w-auto object-contain"
+            />
           </a>
           <a
             href={waLink("Olá! Gostaria de falar com o Ruralshop.")}
@@ -351,7 +364,15 @@ function LandingPage() {
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-10 sm:py-12 text-center sm:flex-row sm:justify-between sm:text-left">
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-center sm:text-left">
             <div className="flex shrink-0 items-center justify-center rounded-2xl bg-white p-2 sm:p-2.5 shadow-xl border-2 border-gold/50">
-              <img src={logoImage} alt="Ruralshop Logo" className="h-14 sm:h-18 w-auto object-contain" />
+              <img
+                src={logoImage}
+                srcSet={logoSrcSet}
+                sizes="(max-width: 640px) 106px, 144px"
+                width={144}
+                height={98}
+                alt="Ruralshop Logo"
+                className="h-14 sm:h-18 w-auto object-contain"
+              />
             </div>
             <div>
               <p className="font-display text-xl sm:text-2xl font-extrabold tracking-tight">+40 anos servindo o homem do campo</p>
@@ -448,7 +469,15 @@ function LandingPage() {
         <div className="mx-auto grid max-w-6xl gap-8 sm:gap-10 px-4 py-10 sm:py-14 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           <div>
             <div className="flex items-center gap-3">
-              <img src={logoImage} alt="Ruralshop Logo" className="h-10 sm:h-12 w-auto object-contain" />
+              <img
+                src={logoImage}
+                srcSet={logoSrcSet}
+                sizes="(max-width: 640px) 106px, 144px"
+                width={144}
+                height={98}
+                alt="Ruralshop Logo"
+                className="h-10 sm:h-12 w-auto object-contain"
+              />
             </div>
             <p className="mt-4 text-xs sm:text-sm text-white/60">O Shopping do Produtor — tudo para o produtor rural em um só lugar.</p>
           </div>
