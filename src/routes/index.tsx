@@ -72,7 +72,15 @@ export const Route = createFileRoute("/")({
   component: LandingPage,
   head: () => ({
     links: [
-      { rel: "preload", as: "image", href: heroImage },
+      {
+        rel: "preload",
+        as: "image",
+        href: heroImage1454,
+        imagesrcset: `${heroImage768} 768w, ${heroImage1200} 1200w, ${heroImage1454} 1454w`,
+        imagesizes: "(max-width: 768px) 768px, (max-width: 1200px) 1200px, 1454px",
+        type: "image/avif",
+        fetchpriority: "high",
+      },
     ],
     scripts: [
       {
@@ -203,6 +211,8 @@ function LandingPage() {
             className="absolute inset-0 -z-10 h-full w-full object-cover"
             width={1454}
             height={818}
+            loading="eager"
+            fetchPriority="high"
           />
         </picture>
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-brand-dark/42 via-brand/25 to-brand-dark/52" />
