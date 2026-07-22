@@ -175,9 +175,9 @@ function LandingPage() {
             href={waLink("Olá! Gostaria de falar com o Ruralshop.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-whatsapp px-3.5 py-2 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold text-white shadow-sm transition hover:bg-whatsapp-dark"
+            className="inline-flex shrink-0 items-center gap-2.5 rounded-full bg-whatsapp px-4 py-2.5 sm:px-6 sm:py-3.5 text-sm sm:text-base font-bold text-white shadow-md transition hover:bg-whatsapp-dark hover:scale-105"
           >
-            <WhatsAppIcon className="h-4 w-4 shrink-0" />
+            <WhatsAppIcon className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
             <span className="hidden sm:inline">Falar no WhatsApp</span>
             <span className="sm:hidden">WhatsApp</span>
           </a>
