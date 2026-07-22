@@ -166,7 +166,7 @@ function LandingPage() {
       )}
 
       {/* Sticky header */}
-      <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/85 backdrop-blur">
+      <header className="sticky top-0 z-40 w-full border-b border-white/15 bg-brand-dark/95 backdrop-blur text-white">
         <div className="mx-auto flex py-0.5 sm:py-1 max-w-6xl items-center justify-between gap-3 px-3 sm:px-4">
           <a href="#top" className="flex items-center shrink-0">
             <img src={logoImage} alt="Ruralshop" className="h-[53px] sm:h-[72px] w-auto object-contain" />
@@ -328,7 +328,7 @@ function LandingPage() {
       <section className="relative overflow-hidden bg-brand-dark text-white border-y border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-10 sm:py-12 text-center sm:flex-row sm:justify-between sm:text-left">
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-center sm:text-left">
-            <div className="flex shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white via-white to-amber-50 p-2 sm:p-2.5 shadow-2xl border-2 border-gold/50">
+            <div className="flex shrink-0 items-center justify-center rounded-2xl bg-white p-2 sm:p-2.5 shadow-xl border-2 border-gold/50">
               <img src={logoImage} alt="Ruralshop Logo" className="h-14 sm:h-18 w-auto object-contain" />
             </div>
             <div>
