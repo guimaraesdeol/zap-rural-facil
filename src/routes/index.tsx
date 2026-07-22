@@ -328,7 +328,7 @@ function LandingPage() {
       <section className="relative overflow-hidden bg-brand-dark text-white border-y border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-10 sm:py-12 text-center sm:flex-row sm:justify-between sm:text-left">
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-center sm:text-left">
-            <div className="flex shrink-0 items-center justify-center rounded-2xl bg-white/15 backdrop-blur-md p-1.5 sm:p-2 shadow-xl border border-white/25">
+            <div className="flex shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white via-white to-amber-50 p-2 sm:p-2.5 shadow-2xl border-2 border-gold/50">
               <img src={logoImage} alt="Ruralshop Logo" className="h-14 sm:h-18 w-auto object-contain" />
             </div>
             <div>
