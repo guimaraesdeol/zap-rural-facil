@@ -325,22 +325,26 @@ function LandingPage() {
       </section>
 
       {/* Social proof banner */}
-      <section className="bg-brand-dark text-white">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-10 sm:py-14 text-center sm:flex-row sm:justify-between sm:text-left">
-          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 text-center sm:text-left">
-            <img src={logoImage} alt="Ruralshop Logo" className="h-13 sm:h-16 w-auto object-contain shrink-0" />
+      <section className="relative overflow-hidden bg-brand-dark text-white border-y border-white/10">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-10 sm:py-12 text-center sm:flex-row sm:justify-between sm:text-left">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-center sm:text-left">
+            <div className="flex shrink-0 items-center justify-center rounded-2xl bg-white p-3 sm:p-3.5 shadow-xl border border-white/20">
+              <img src={logoImage} alt="Ruralshop Logo" className="h-10 sm:h-12 w-auto object-contain" />
+            </div>
             <div>
-              <p className="font-display text-xl sm:text-2xl font-extrabold">+40 anos servindo o homem do campo</p>
-              <p className="mt-1 text-xs sm:text-sm text-white/80">Referência em produtos agropecuários em Campo Grande MS • Do plantio à colheita, estamos com você</p>
+              <p className="font-display text-xl sm:text-2xl font-extrabold tracking-tight">+40 anos servindo o homem do campo</p>
+              <p className="mt-1.5 text-xs sm:text-sm text-white/85 max-w-xl leading-relaxed">
+                Referência em produtos agropecuários em Campo Grande MS <span className="hidden md:inline">•</span> Do plantio à colheita, estamos com você
+              </p>
             </div>
           </div>
           <a
             href={waLink("Olá! Quero saber mais sobre o Ruralshop.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-bold text-brand-dark transition hover:brightness-95"
+            className="pulse-cta inline-flex w-full sm:w-auto shrink-0 items-center justify-center gap-2.5 rounded-full bg-gold px-7 py-3.5 text-sm font-bold text-brand-dark shadow-lg transition hover:brightness-105"
           >
-            <WhatsAppIcon className="h-4 w-4 shrink-0" />
+            <WhatsAppIcon className="h-5 w-5 shrink-0" />
             <span>Falar agora</span>
           </a>
         </div>
