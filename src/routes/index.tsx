@@ -167,9 +167,9 @@ function LandingPage() {
 
       {/* Sticky header */}
       <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/85 backdrop-blur">
-        <div className="mx-auto flex h-16 sm:h-18 max-w-6xl items-center justify-between gap-3 px-4">
+        <div className="mx-auto flex py-1 sm:py-1.5 max-w-6xl items-center justify-between gap-3 px-3 sm:px-4">
           <a href="#top" className="flex items-center shrink-0">
-            <img src={logoImage} alt="Ruralshop" className="h-9 sm:h-[48px] w-auto object-contain" />
+            <img src={logoImage} alt="Ruralshop" className="h-12 sm:h-[65px] w-auto object-contain" />
           </a>
           <a
             href={waLink("Olá! Gostaria de falar com o Ruralshop.")}
