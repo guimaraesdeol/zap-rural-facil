@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import {
   Sprout,
   Wheat,
@@ -12,12 +12,10 @@ import {
   Package,
   Award,
   Truck,
-  MessageCircle,
   MapPin,
   Phone,
   Mail,
   Clock,
-  Star,
   Users,
   Instagram,
   Droplets,
@@ -27,20 +25,16 @@ import {
 import heroImage768 from "@/assets/hero-ruralshop-768.avif";
 import heroImage1200 from "@/assets/hero-ruralshop-1200.avif";
 import heroImage1454 from "@/assets/hero-ruralshop-1454.avif";
-import heroImage from "@/assets/hero-ruralshop.avif";
 import logoImage106 from "@/assets/logo-106.webp";
 import logoImage144 from "@/assets/logo-144.webp";
 import logoImage from "@/assets/logo.webp";
 
+const TrabalheModal = lazy(() => import("@/components/TrabalheModal"));
+const CategoryCarousel = lazy(() => import("@/components/CategoryCarousel"));
+
 const logoSrcSet = `${logoImage106} 106w, ${logoImage144} 144w`;
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from "@/components/ui/carousel";
+
 
 const PHONE_DISPLAY = "(67) 3358-7000";
 const WHATSAPP_DISPLAY = "(67) 98767-744";
@@ -155,34 +149,9 @@ function LandingPage() {
 
       {/* Trabalhe Conosco Modal */}
       {showTrabalhe && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm" onClick={() => setShowTrabalhe(false)}>
-          <div className="relative w-full max-w-lg rounded-2xl bg-white p-6 sm:p-8 shadow-2xl" onClick={(e) => e.stopPropagation()}>
-            <button
-              onClick={() => setShowTrabalhe(false)}
-              className="absolute right-4 top-4 grid h-8 w-8 place-items-center rounded-full text-foreground/60 transition hover:bg-secondary hover:text-foreground"
-              aria-label="Fechar"
-            >
-              ✕
-            </button>
-            <div className="text-center">
-              <div className="mx-auto grid h-12 w-12 sm:h-14 sm:w-14 place-items-center rounded-2xl bg-brand/10 text-brand">
-                <Mail className="h-6 w-6 sm:h-7 sm:w-7" />
-              </div>
-              <h3 className="mt-4 sm:mt-5 font-display text-xl sm:text-2xl font-extrabold text-brand-dark">Trabalhe Conosco</h3>
-              <p className="mt-3 sm:mt-4 text-sm sm:text-base leading-relaxed text-foreground/80">
-                Quer fazer parte da nossa equipe? Envie seu currículo para o e-mail abaixo:
-              </p>
-              <a
-                href="mailto:administrativo@ruralshopcg.com.br?subject=Curr%C3%ADculo%20-%20Trabalhe%20Conosco"
-                className="mt-5 sm:mt-6 inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-brand px-5 py-3 text-xs sm:text-sm font-bold text-white transition hover:bg-brand-dark break-all sm:break-normal"
-              >
-                <Mail className="h-4 w-4 shrink-0" />
-                <span>administrativo@ruralshopcg.com.br</span>
-              </a>
-              <p className="mt-3 sm:mt-4 text-xs text-muted-foreground">Envie seu currículo em anexo (PDF ou Word).</p>
-            </div>
-          </div>
-        </div>
+        <Suspense fallback={null}>
+          <TrabalheModal onClose={() => setShowTrabalhe(false)} />
+        </Suspense>
       )}
 
       {/* Sticky header */}
@@ -272,42 +241,17 @@ function LandingPage() {
           </p>
         </div>
         <div className="relative mt-8 sm:mt-12 px-0 sm:px-4 md:px-16">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
+          <Suspense
+            fallback={
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 animate-pulse">
+                {categories.slice(0, 4).map(({ name }) => (
+                  <div key={name} className="h-48 rounded-2xl bg-secondary/50" />
+                ))}
+              </div>
+            }
           >
-            <CarouselContent className="-ml-3 sm:-ml-4 flex items-stretch">
-              {categories.map(({ icon: Icon, name, msg }) => (
-                <CarouselItem
-                  key={name}
-                  className="pl-3 sm:pl-4 basis-[80%] sm:basis-1/2 md:basis-1/3 lg:basis-1/4 flex flex-col"
-                >
-                  <div className="group flex h-full w-full flex-col justify-between rounded-2xl border border-border bg-card p-5 sm:p-6 shadow-sm transition hover:-translate-y-1 hover:border-brand/50 hover:shadow-lg">
-                    <div>
-                      <div className="grid h-12 w-12 sm:h-14 sm:w-14 place-items-center rounded-xl bg-secondary text-brand transition group-hover:bg-brand group-hover:text-primary-foreground">
-                        <Icon className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2} />
-                      </div>
-                      <h3 className="mt-4 sm:mt-5 font-display text-lg sm:text-xl font-bold text-brand-dark">{name}</h3>
-                    </div>
-                    <a
-                      href={waLink(msg)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-5 sm:mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand/10 px-3 py-2.5 text-center text-xs sm:text-sm font-semibold text-brand-dark transition hover:bg-brand hover:text-primary-foreground"
-                    >
-                      <WhatsAppIcon className="h-4 w-4 shrink-0" />
-                      <span>Consultar via WhatsApp</span>
-                    </a>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:inline-flex" />
-            <CarouselNext className="hidden md:inline-flex" />
-          </Carousel>
+            <CategoryCarousel categories={categories} waLink={waLink} />
+          </Suspense>
         </div>
       </section>
 
