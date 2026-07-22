@@ -167,9 +167,9 @@ function LandingPage() {
 
       {/* Sticky header */}
       <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/85 backdrop-blur">
-        <div className="mx-auto flex py-1 sm:py-1.5 max-w-6xl items-center justify-between gap-3 px-3 sm:px-4">
+        <div className="mx-auto flex py-0.5 sm:py-1 max-w-6xl items-center justify-between gap-3 px-3 sm:px-4">
           <a href="#top" className="flex items-center shrink-0">
-            <img src={logoImage} alt="Ruralshop" className="h-12 sm:h-[65px] w-auto object-contain" />
+            <img src={logoImage} alt="Ruralshop" className="h-[53px] sm:h-[72px] w-auto object-contain" />
           </a>
           <a
             href={waLink("Olá! Gostaria de falar com o Ruralshop.")}
@@ -193,7 +193,7 @@ function LandingPage() {
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-brand-dark/58 via-brand/42 to-brand-dark/72" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-brand-dark/38 via-brand/25 to-brand-dark/48" />
         <div className="mx-auto max-w-6xl px-4 py-14 sm:py-32 lg:py-40">
           <div className="max-w-3xl text-white">
             <h1 className="font-display text-3xl font-extrabold leading-tight sm:text-6xl lg:text-7xl">
