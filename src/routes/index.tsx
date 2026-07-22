@@ -328,7 +328,7 @@ function LandingPage() {
       <section className="bg-brand-dark text-white">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-10 sm:py-14 text-center sm:flex-row sm:justify-between sm:text-left">
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 text-center sm:text-left">
-            <img src={logoImage} alt="Ruralshop Logo" className="h-10 sm:h-12 w-auto object-contain shrink-0" />
+            <img src={logoImage} alt="Ruralshop Logo" className="h-13 sm:h-16 w-auto object-contain shrink-0" />
             <div>
               <p className="font-display text-xl sm:text-2xl font-extrabold">+40 anos servindo o homem do campo</p>
               <p className="mt-1 text-xs sm:text-sm text-white/80">Referência em produtos agropecuários em Campo Grande MS • Do plantio à colheita, estamos com você</p>
