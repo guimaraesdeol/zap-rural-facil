@@ -170,7 +170,7 @@ function LandingPage() {
       )}
 
       {/* Sticky header */}
-      <header className="sticky top-0 z-40 w-full border-b border-white/15 bg-brand-dark/88 backdrop-blur-md text-white">
+      <header className="sticky top-0 z-40 w-full border-b border-black/10 bg-white/88 backdrop-blur-md text-zinc-900">
         <div className="mx-auto flex py-0.5 sm:py-1 max-w-6xl items-center justify-between gap-3 px-3 sm:px-4">
           <a href="#top" className="flex items-center shrink-0">
             <img src={logoImage} alt="Ruralshop" className="h-[53px] sm:h-[72px] w-auto object-contain" />
