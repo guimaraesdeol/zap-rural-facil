@@ -328,8 +328,8 @@ function LandingPage() {
       <section className="relative overflow-hidden bg-brand-dark text-white border-y border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-10 sm:py-12 text-center sm:flex-row sm:justify-between sm:text-left">
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-center sm:text-left">
-            <div className="flex shrink-0 items-center justify-center rounded-2xl bg-white p-3 sm:p-3.5 shadow-xl border border-white/20">
-              <img src={logoImage} alt="Ruralshop Logo" className="h-10 sm:h-12 w-auto object-contain" />
+            <div className="flex shrink-0 items-center justify-center rounded-2xl bg-white p-1.5 sm:p-2 shadow-xl border border-white/20">
+              <img src={logoImage} alt="Ruralshop Logo" className="h-14 sm:h-18 w-auto object-contain" />
             </div>
             <div>
               <p className="font-display text-xl sm:text-2xl font-extrabold tracking-tight">+40 anos servindo o homem do campo</p>
@@ -386,7 +386,7 @@ function LandingPage() {
             />
             <div className="bg-card p-3.5 sm:p-4 text-center border-t border-border">
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Rua+S%C3%A3o+Borja+508+Campo+Grande+MS"
+                href="https://www.google.com/maps/place/RURALSHOP+CAMPO+GRANDE/@-20.4380913,-54.6045134,7342m/data=!3m1!1e3!4m15!1m8!3m7!1s0x9486e862aca5d963:0x8f8da8337f4bc70!2sR.+S%C3%A3o+Borja,+508+-+Vila+C%C3%A9lia,+Campo+Grande+-+MS,+79022-360!3b1!8m2!3d-20.4402377!4d-54.5984302!16s%2Fg%2F11c0z1w_b3!3m5!1s0x9486e87d4d170e01:0x8c5a240cbf1c9a96!8m2!3d-20.4402553!4d-54.5984221!16s%2Fg%2F11bbs_g50c?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-brand px-5 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-sm transition hover:bg-brand-dark"
