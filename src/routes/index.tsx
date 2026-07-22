@@ -24,7 +24,7 @@ import {
   Layers,
   Flower2,
 } from "lucide-react";
-import heroImage from "@/assets/hero-ruralshop.jpg";
+import heroImage from "@/assets/hero-ruralshop.avif";
 import logoImage from "@/assets/logo.png";
 import {
   Carousel,
