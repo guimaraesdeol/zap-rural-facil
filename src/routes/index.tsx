@@ -46,16 +46,16 @@ const waLink = (msg: string) =>
   `${WHATSAPP_BASE}?text=${encodeURIComponent(msg)}`;
 
 const categories = [
-  { icon: Sprout, name: "Sementes", msg: "Olá! Gostaria de consultar sementes disponíveis na Ruralshop." },
-  { icon: Wheat, name: "Rações", msg: "Olá! Gostaria de consultar rações disponíveis na Ruralshop." },
-  { icon: FlaskConical, name: "Fertilizantes", msg: "Olá! Gostaria de consultar fertilizantes na Ruralshop." },
-  { icon: HardHat, name: "EPIs", msg: "Olá! Gostaria de consultar EPIs disponíveis na Ruralshop." },
-  { icon: Tractor, name: "Equipamentos", msg: "Olá! Gostaria de consultar equipamentos agropecuários na Ruralshop." },
-  { icon: Syringe, name: "Produtos Veterinários", msg: "Olá! Gostaria de consultar produtos veterinários na Ruralshop." },
-  { icon: ShieldCheck, name: "Defensivos Agrícolas", msg: "Olá! Gostaria de consultar defensivos agrícolas disponíveis na Ruralshop." },
-  { icon: Layers, name: "Selaria", msg: "Olá! Gostaria de consultar artigos de selaria na Ruralshop." },
-  { icon: Droplets, name: "Irrigação", msg: "Olá! Gostaria de consultar produtos para irrigação na Ruralshop." },
-  { icon: Flower2, name: "Jardinagem", msg: "Olá! Gostaria de consultar produtos para jardinagem na Ruralshop." },
+  { icon: Sprout, name: "Sementes", msg: "Olá! Gostaria de consultar sementes disponíveis no Ruralshop." },
+  { icon: Wheat, name: "Rações", msg: "Olá! Gostaria de consultar rações disponíveis no Ruralshop." },
+  { icon: FlaskConical, name: "Fertilizantes", msg: "Olá! Gostaria de consultar fertilizantes no Ruralshop." },
+  { icon: HardHat, name: "EPIs", msg: "Olá! Gostaria de consultar EPIs disponíveis no Ruralshop." },
+  { icon: Tractor, name: "Equipamentos", msg: "Olá! Gostaria de consultar equipamentos agropecuários no Ruralshop." },
+  { icon: Syringe, name: "Produtos Veterinários", msg: "Olá! Gostaria de consultar produtos veterinários no Ruralshop." },
+  { icon: ShieldCheck, name: "Defensivos Agrícolas", msg: "Olá! Gostaria de consultar defensivos agrícolas disponíveis no Ruralshop." },
+  { icon: Layers, name: "Selaria", msg: "Olá! Gostaria de consultar artigos de selaria no Ruralshop." },
+  { icon: Droplets, name: "Irrigação", msg: "Olá! Gostaria de consultar produtos para irrigação no Ruralshop." },
+  { icon: Flower2, name: "Jardinagem", msg: "Olá! Gostaria de consultar produtos para jardinagem no Ruralshop." },
 ];
 
 const differentiators = [
@@ -172,7 +172,7 @@ function LandingPage() {
             <img src={logoImage} alt="Ruralshop" className="h-9 sm:h-[48px] w-auto object-contain" />
           </a>
           <a
-            href={waLink("Olá! Gostaria de falar com a Ruralshop.")}
+            href={waLink("Olá! Gostaria de falar com o Ruralshop.")}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex shrink-0 items-center gap-2 rounded-full bg-whatsapp px-3.5 py-2 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold text-white shadow-sm transition hover:bg-whatsapp-dark"
@@ -201,11 +201,11 @@ function LandingPage() {
               <span className="mt-1 sm:mt-2 block text-gold">O Shopping do Produtor</span>
             </h1>
             <p className="mt-4 sm:mt-6 max-w-2xl text-sm sm:text-lg leading-relaxed text-white/95">
-              Encontre tudo para o seu campo: <strong>sementes, rações (grandes e pequenos animais), fertilizantes, EPIs, equipamentos, produtos veterinários, defensivos agrícolas, selaria, irrigação e jardinagem</strong>. Tudo o que o produtor rural precisa com atendimento rápido e orçamento na hora pelo WhatsApp!
+              Encontre tudo o que precisa em um só lugar. Oferecemos uma <strong>linha completa de produtos para o produtor rural, unindo variedade, qualidade e agilidade no atendimento</strong>. Fale conosco pelo WhatsApp e receba seu orçamento na hora!
             </p>
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <a
-                href={waLink("Olá! Quero fazer um pedido na Ruralshop.")}
+                href={waLink("Olá! Quero fazer um pedido no Ruralshop.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="pulse-cta inline-flex items-center justify-center gap-3 rounded-full bg-whatsapp px-6 py-3.5 sm:px-7 sm:py-4 text-base sm:text-lg font-bold text-white shadow-lg transition hover:bg-whatsapp-dark"
@@ -285,7 +285,7 @@ function LandingPage() {
               Tradição no atendimento ao produtor rural
             </h2>
             <p className="mt-4 sm:mt-5 text-sm sm:text-base leading-relaxed text-foreground/80">
-              A Ruralshop é referência em produtos agropecuários, oferecendo a maior variedade de estoque a pronta entrega com a qualidade e o atendimento próximo de quem realmente entende do campo.
+              O Ruralshop é referência em produtos agropecuários, oferecendo a maior variedade de estoque a pronta entrega com a qualidade e o atendimento próximo de quem realmente entende do campo.
             </p>
             <p className="mt-3 text-sm sm:text-base leading-relaxed text-foreground/80">
               Do pequeno criador ao grande produtor, nossa missão é facilitar a rotina de quem trabalha na lavoura, na pecuária e no dia a dia rural — com produtos que fazem a diferença e um atendimento pelo WhatsApp que resolve.
@@ -303,7 +303,7 @@ function LandingPage() {
       {/* Differentiators */}
       <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-earth">Por que a Ruralshop</p>
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-earth">Por que o Ruralshop</p>
           <h2 className="mt-2 sm:mt-3 font-display text-2xl sm:text-4xl font-extrabold text-brand-dark">
             Feito para facilitar a sua rotina
           </h2>
@@ -337,7 +337,7 @@ function LandingPage() {
             </div>
           </div>
           <a
-            href={waLink("Olá! Quero saber mais sobre a Ruralshop.")}
+            href={waLink("Olá! Quero saber mais sobre o Ruralshop.")}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-bold text-brand-dark transition hover:brightness-95"
@@ -375,7 +375,7 @@ function LandingPage() {
           </div>
           <div className="flex flex-col overflow-hidden rounded-2xl border border-border shadow-sm">
             <iframe
-              title="Mapa da Ruralshop — R. São Borja, 508"
+              title="Mapa do Ruralshop — R. São Borja, 508"
               src="https://maps.google.com/maps?q=Rua+S%C3%A3o+Borja+508,+Vila+C%C3%A9lia,+Campo+Grande+-+MS&t=&z=16&ie=UTF8&iwloc=&output=embed"
               className="h-[260px] sm:h-[380px] w-full border-0"
               loading="lazy"
@@ -456,7 +456,7 @@ function LandingPage() {
                 href="https://www.instagram.com/ruralshopcgofc/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram da Ruralshop"
+                aria-label="Instagram do Ruralshop"
                 className="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition hover:bg-brand"
               >
                 <Instagram className="h-5 w-5" />
@@ -465,7 +465,7 @@ function LandingPage() {
                 href={waLink("Olá!")}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="WhatsApp da Ruralshop"
+                aria-label="WhatsApp do Ruralshop"
                 className="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition hover:bg-whatsapp"
               >
                 <WhatsAppIcon className="h-5 w-5" />
@@ -487,10 +487,10 @@ function LandingPage() {
 
       {/* Floating WhatsApp button */}
       <a
-        href={waLink("Olá! Quero falar com a Ruralshop.")}
+        href={waLink("Olá! Quero falar com o Ruralshop.")}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Fale com a Ruralshop no WhatsApp"
+        aria-label="Fale com o Ruralshop no WhatsApp"
         className="pulse-cta fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 grid h-13 w-13 sm:h-16 sm:w-16 place-items-center rounded-full bg-whatsapp text-white shadow-2xl transition hover:bg-whatsapp-dark"
       >
         <WhatsAppIcon className="h-6 w-6 sm:h-8 sm:w-8" />
