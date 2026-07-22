@@ -68,6 +68,9 @@ const differentiators = [
 export const Route = createFileRoute("/")({
   component: LandingPage,
   head: () => ({
+    links: [
+      { rel: "preload", as: "image", href: heroImage },
+    ],
     scripts: [
       {
         type: "application/ld+json",
@@ -89,8 +92,8 @@ export const Route = createFileRoute("/")({
           },
           geo: {
             "@type": "GeoCoordinates",
-            latitude: -20.4697,
-            longitude: -54.6201,
+            latitude: -20.4402553,
+            longitude: -54.5984221,
           },
           telephone: "+556733587000",
           priceRange: "$$",
@@ -112,6 +115,7 @@ export const Route = createFileRoute("/")({
           ],
           sameAs: [
             "https://www.instagram.com/ruralshopcgofc/",
+            "https://www.google.com/maps/place/RURALSHOP+CAMPO+GRANDE/@-20.4380913,-54.6045134,7342m/data=!3m1!1e3!4m15!1m8!3m7!1s0x9486e862aca5d963:0x8f8da8337f4bc70!2sR.+S%C3%A3o+Borja,+508+-+Vila+C%C3%A9lia,+Campo+Grande+-+MS,+79022-360!3b1!8m2!3d-20.4402377!4d-54.5984302!16s%2Fg%2F11c0z1w_b3!3m5!1s0x9486e87d4d170e01:0x8c5a240cbf1c9a96!8m2!3d-20.4402553!4d-54.5984221!16s%2Fg%2F11bbs_g50c?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D",
           ],
         }),
       },
