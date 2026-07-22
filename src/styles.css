@@ -39,6 +39,7 @@
   --color-brand-dark: var(--brand-dark);
   --color-earth: var(--earth);
   --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
   --color-whatsapp: var(--whatsapp);
   --color-whatsapp-dark: var(--whatsapp-dark);
 }
@@ -50,6 +51,7 @@
   --brand-dark: oklch(0.44 0.14 145);       /* #1B5E20 */
   --earth: oklch(0.65 0.15 55);             /* #D97B29 */
   --gold: oklch(0.82 0.16 85);              /* #F4B400 */
+  --gold-light: oklch(0.92 0.15 85);        /* Lighter gold for high contrast */
   --whatsapp: oklch(0.68 0.17 148);
   --whatsapp-dark: oklch(0.55 0.16 148);
 

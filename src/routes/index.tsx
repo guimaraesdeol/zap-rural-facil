@@ -202,7 +202,7 @@ function LandingPage() {
           <div className="max-w-3xl text-white">
             <h1 className="font-display text-3xl font-extrabold leading-tight sm:text-6xl lg:text-7xl">
               Ruralshop
-              <span className="mt-1 sm:mt-2 block text-gold">O Shopping do Produtor</span>
+              <span className="mt-1 sm:mt-2 block text-gold-light">O Shopping do Produtor</span>
             </h1>
             <p className="mt-4 sm:mt-6 max-w-2xl text-sm sm:text-base leading-loose sm:leading-loose text-white/95 [text-shadow:_0_2px_4px_rgba(0,0,0,0.85)]">
               Encontre tudo o que precisa em um só lugar. Oferecemos uma <strong>linha completa de produtos para o produtor rural, unindo variedade, qualidade e agilidade no atendimento</strong>. Fale conosco pelo WhatsApp e receba seu orçamento na hora!
