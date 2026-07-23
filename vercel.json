@@ -4,6 +4,16 @@
       "source": "/INICIO",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/SOBRE-NÓS",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/CONTATO",
+      "destination": "/",
+      "permanent": true
     }
   ]
 }
