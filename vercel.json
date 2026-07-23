@@ -3,17 +3,18 @@
     {
       "source": "/INICIO",
       "destination": "/",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/SOBRE-NÓS",
       "destination": "/",
-      "permanent": true
+      "statusCode": 301,
+      "caseSensitive": false
     },
     {
       "source": "/CONTATO",
       "destination": "/",
-      "permanent": true
+      "statusCode": 301
     }
   ]
 }
