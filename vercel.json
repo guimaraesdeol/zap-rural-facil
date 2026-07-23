@@ -12,6 +12,11 @@
       "caseSensitive": false
     },
     {
+      "source": "/SOBRE-N%C3%93S",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
       "source": "/CONTATO",
       "destination": "/",
       "statusCode": 301
