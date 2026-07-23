@@ -37,7 +37,7 @@ const logoSrcSet = `${logoImage106} 106w, ${logoImage144} 144w`;
 
 
 const PHONE_DISPLAY = "(67) 3358-7000";
-const WHATSAPP_DISPLAY = "(67) 98767-744";
+const WHATSAPP_DISPLAY = "(67) 99876-7744";
 const WHATSAPP_BASE = "https://wa.me/556798767744";
 const ADDRESS = "R. São Borja, 508 - Vila Célia, Campo Grande - MS, 79022-360, Brasil";
 const HOURS_WEEK = "Seg a Sex: 07h30 às 17h30";
