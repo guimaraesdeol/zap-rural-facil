@@ -8,8 +8,7 @@
     {
       "source": "/SOBRE-NÓS",
       "destination": "/",
-      "statusCode": 301,
-      "caseSensitive": false
+      "statusCode": 301
     },
     {
       "source": "/SOBRE-N%C3%93S",
